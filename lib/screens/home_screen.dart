@@ -52,6 +52,8 @@ class HomeScreen extends StatelessWidget
         padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 140.0),
         children: [
           UpcomingRooms(upcoming: upcomingRoomsList),
+          SizedBox(height:20),
+          ExistingRoom(rl: roomsList),
         ],
       ),
     );

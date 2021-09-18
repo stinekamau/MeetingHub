@@ -125,6 +125,11 @@ const List<Room> upcomingRoomsList = [
     name: 'Clubhouse Turns 1',
     time: '9:00 PM',
   ),
+  Room(
+    club: 'Hiring and Sales agency',
+    name: 'Recruitment',
+    time: '12.00 PM',
+  ),
 ];
 
 final List<Room> roomsList = [
@@ -149,4 +154,35 @@ final List<Room> roomsList = [
     followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
     others: List<User>.from(_allUsers)..shuffle(),
   ),
+  Room(
+    club: 'Design And Analysis of Algorithms',
+    name: 'Splay Tree',
+    speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),
+    followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
+    others: List<User>.from(_allUsers)..shuffle(),
+  ),
+  Room(
+    club: 'Computer Organization',
+    name: 'Deploying the RAID System ',
+    speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),
+    followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
+    others: List<User>.from(_allUsers)..shuffle(),
+  ),
+  Room(
+    club: 'Systems Programming',
+    name: 'Implementing a C Program',
+    speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),
+    followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
+    others: List<User>.from(_allUsers)..shuffle(),
+  ),
+
+  Room(
+    club: 'Software Engineering',
+    name: 'Testing and Implementation',
+    speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),
+    followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
+    others: List<User>.from(_allUsers)..shuffle(),
+  ),
+
+
 ];
