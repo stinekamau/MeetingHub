@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:club_house/widgets/user_profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:club_house/widgets/widgets.dart';
 
 import '../data.dart';
 
@@ -54,10 +57,27 @@ class RoomScreen extends StatelessWidget
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    Text("Club"),
-                    Icon(CupertinoIcons.ellipsis)
-                  ],)
+                      Text('${room.club}'.toUpperCase(),
+                          style:Theme.of(context).textTheme.overline!.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 1.0,
+                          ),
+                        overflow: TextOverflow.fade,
+                      ),
+                    GestureDetector( onTap: (){}, child: Icon(CupertinoIcons.ellipsis)),
+                  ],),
+                  Text(room.name,style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                    fontSize:16.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.0
+                  ),)
                 ],),
+              ),
+              SliverGrid.count(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 20,
+                  children: room.speakers.map((e)=>RoomUserProfile(imageURL: e.imageUrl,name: e.givenName,size:45,isNew:Random().nextBool(),isMuted: Random().nextBool(),)).toList()
               )
             ],
 
