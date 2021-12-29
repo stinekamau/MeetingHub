@@ -1,4 +1,5 @@
 import 'package:club_house/widgets/room_images.dart';
+import 'package:club_house/widgets/room_sheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:club_house/widgets/widgets.dart';
@@ -164,7 +165,7 @@ class RoomScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      height: 5,
+                      height: 150,
                     )
                   ],
                 ),
@@ -172,6 +173,7 @@ class RoomScreen extends StatelessWidget {
             ],
           ),
         ),
+        bottomSheet: RoomSheet(),
       ),
     );
   }
