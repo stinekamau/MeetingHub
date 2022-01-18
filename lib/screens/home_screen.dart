@@ -1,3 +1,5 @@
+import 'package:club_house/widgets/complete_bottom_sheet.dart';
+import 'package:club_house/widgets/create_room.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:club_house/widgets/widgets.dart';
@@ -83,25 +85,41 @@ class HomeScreen extends StatelessWidget {
           ),
           Positioned(
               bottom: 60,
-              child: Container(
-                padding: EdgeInsets.all(4),
-                height: 40,
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(35.0),
-                ),
-                child: Text.rich(
-                  TextSpan(children: [
-                    WidgetSpan(
-                        child: Icon(
-                      CupertinoIcons.add,
-                      color: Colors.white,
-                    )),
-                    TextSpan(
-                      text: ' Start A room  ',
-                      style: TextStyle(fontSize: 18, color: Colors.white70),
-                    ),
-                  ]),
+              child: GestureDetector(
+                onTap: () {
+                  // Navigator.of(context).push(
+                  //     MaterialPageRoute(builder: (_) => CompleteBottomSheet()));
+
+                  showModalBottomSheet(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(40.0),
+                      )),
+                      context: context,
+                      builder: (context) {
+                        return CompleteBottomSheet();
+                      });
+                },
+                child: Container(
+                  padding: EdgeInsets.all(4),
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(35.0),
+                  ),
+                  child: Text.rich(
+                    TextSpan(children: [
+                      WidgetSpan(
+                          child: Icon(
+                        CupertinoIcons.add,
+                        color: Colors.white,
+                      )),
+                      TextSpan(
+                        text: ' Start A room  ',
+                        style: TextStyle(fontSize: 18, color: Colors.white70),
+                      ),
+                    ]),
+                  ),
                 ),
               )),
           Stack(

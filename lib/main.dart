@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 import 'package:club_house/config/palette.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:club_house/screens/home_screen.dart';
 

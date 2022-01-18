@@ -4,14 +4,13 @@ import 'package:club_house/data.dart';
 import 'package:club_house/config/palette.dart';
 import 'package:flutter/cupertino.dart';
 
-class ExistingRoom extends StatelessWidget
-{
-  final  List<Room> rl;
+class ExistingRoom extends StatelessWidget {
+  final List<Room> rl;
 
   const ExistingRoom({
     Key? key,
     required this.rl,
-}):super(key:key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +20,7 @@ class ExistingRoom extends StatelessWidget
       height: 800,
       child: ListView.builder(
         itemCount: rl.length,
-        itemBuilder: (BuildContext context,int i)
-        {
+        itemBuilder: (BuildContext context, int i) {
           return SizedBox(
             height: 200,
             child: Card(
@@ -32,34 +30,28 @@ class ExistingRoom extends StatelessWidget
               ),
               color: Colors.white70,
               shadowColor: Colors.black54,
-
               child: Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('${rl[i].club}')
-                    ],
+                    children: [Text('${rl[i].club}')],
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text('${rl[i].name}')
-                    ],
+                    children: [Text('${rl[i].name}')],
                   ),
-                  SizedBox(height: 10,),
-
-
+                  SizedBox(
+                    height: 10,
+                  ),
                 ],
               ),
-
             ),
           );
         },
       ),
     );
-
   }
-
 }
