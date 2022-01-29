@@ -1,93 +1,105 @@
 /** Contain all the mock data to be used in the app */
-class User
-{
-  final String givenName;
-  final String familyName;
-  final String imageUrl;
+class User {
+  String givenName;
+  String familyName;
+  String imageUrl;
+  String description;
+  int followers;
+  int following;
+  DateTime? date;
+  String tagName;
+  static List? memberOf = [];
 
-  const User(
-  {
-    required this.givenName,
-    required this.familyName,
-    required this.imageUrl
+  User(
+      {required this.givenName,
+      required this.familyName,
+      required this.imageUrl,
+      this.description = "This is my bio",
+      this.followers = 0,
+      this.following = 0,
+      this.date,
+      this.tagName = "@username"});
 }
-      );
 
-}
+DateTime rynna = DateTime.now();
 
+User currentUser = User(
+    givenName: 'Marcus',
+    familyName: 'Ng',
+    imageUrl:
+        'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
+    description:
+        "Top Notch assignment Hub.\n\n Hire legit research help in:\n\n.☑️ Business\n\n☑️Humanities\n\n☑️ Management\n☑️Accounting\n☑️Computer Science",
+    followers: 17,
+    following: 12,
+    tagName: "@marcusNg",
+    date: new DateTime(rynna.year, rynna.month, rynna.day));
 
-const User currentUser = User(
-  givenName: 'Marcus',
-  familyName: 'Ng',
-  imageUrl:
-  'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
-);
-
-const List<User> _allUsers = [
+List<User> _allUsers = [
   User(
     givenName: 'Marcus',
     familyName: 'Ng',
     imageUrl:
-    'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
+        'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
   ),
   User(
     givenName: 'David',
     familyName: 'Brooks',
     imageUrl:
-    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
   ),
   User(
     givenName: 'Jane',
     familyName: 'Doe',
     imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
   ),
   User(
     givenName: 'Matthew',
     familyName: 'Hinkle',
     imageUrl:
-    'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80',
+        'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80',
   ),
   User(
     givenName: 'Amy',
     familyName: 'Smith',
     imageUrl:
-    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
+        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
   ),
   User(
     givenName: 'Ed',
     familyName: 'Morris',
     imageUrl:
-    'https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80',
+        'https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80',
   ),
   User(
     givenName: 'Carolyn',
     familyName: 'Duncan',
     imageUrl:
-    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
   ),
   User(
     givenName: 'Paul',
     familyName: 'Pinnock',
     imageUrl:
-    'https://images.unsplash.com/photo-1519631128182-433895475ffe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        'https://images.unsplash.com/photo-1519631128182-433895475ffe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
   ),
   User(
       givenName: 'Elizabeth',
       familyName: 'Wong',
       imageUrl:
-      'https://images.unsplash.com/photo-1515077678510-ce3bdf418862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=675&q=80'),
+          'https://images.unsplash.com/photo-1515077678510-ce3bdf418862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=675&q=80'),
   User(
     givenName: 'James',
     familyName: 'Lathrop',
     imageUrl:
-    'https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80',
+        'https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=592&q=80',
   ),
   User(
     givenName: 'Jessie',
     familyName: 'Samson',
     imageUrl:
-    'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
   ),
 ];
 
@@ -141,7 +153,7 @@ final List<Room> roomsList = [
     others: List<User>.from(_allUsers)..shuffle(),
   ),
   Room(
-    club: 'General Economics' ,
+    club: 'General Economics',
     name: '⏰ Measurement of the National income',
     speakers: (List<User>.from(_allUsers)..shuffle()).getRange(0, 4).toList(),
     followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
@@ -175,7 +187,6 @@ final List<Room> roomsList = [
     followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
     others: List<User>.from(_allUsers)..shuffle(),
   ),
-
   Room(
     club: 'Software Engineering',
     name: 'Testing and Implementation',
@@ -183,6 +194,4 @@ final List<Room> roomsList = [
     followedBySpeakers: List<User>.from(_allUsers)..shuffle(),
     others: List<User>.from(_allUsers)..shuffle(),
   ),
-
-
 ];
