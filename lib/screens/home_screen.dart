@@ -1,5 +1,4 @@
-import 'package:club_house/widgets/complete_bottom_sheet.dart';
-import 'package:club_house/widgets/create_room.dart';
+import 'package:club_house/widgets/user_icon_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:club_house/widgets/widgets.dart';
@@ -43,7 +42,10 @@ class HomeScreen extends StatelessWidget {
               )),
           // UserProfileImage(imageurl: currentUser.imageUrl),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => UserIconDetails()));
+            },
             child: Padding(
                 padding: EdgeInsets.fromLTRB(4, 6, 3, 6),
                 child: UserProfileImage(imageurl: currentUser.imageUrl)),
@@ -88,7 +90,7 @@ class HomeScreen extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (_) => CompleteBottomSheet()));
+                  //     MaterialPageRoute(builder: (_) => ));
 
                   showModalBottomSheet(
                       shape: RoundedRectangleBorder(
